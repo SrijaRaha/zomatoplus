@@ -1,0 +1,72 @@
+<div class="well">
+	<form novalidate>
+		<table cellpadding="100">
+			<tr>
+				<td>Type</td>
+				<td><input type="text" ng-model="user.type"></td>
+			</tr>
+
+			<tr>
+				<td>Mobile</td>
+				<td><input type="text" ng-model="user.mobile"></td>
+			</tr>
+
+			<tr>
+				<td>Name</td>
+				<td><input type="text" ng-model="user.name"></td>
+			</tr>
+
+			<tr>
+				<td>Pincode</td>
+				<td><input type="text" ng-model="user.pincode"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" ng-model="user.password"></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><input type="text" ng-model="user.address"></td>
+			</tr>
+			<tr>
+				<td>Landmark</td>
+				<td><input type="text" ng-model="user.landmark"></td>
+			</tr>
+
+	
+
+			<tr>
+				<td><button ng-click="saveUser()">Save User</button></td>
+			</tr>
+		</table>
+
+	<p>newUser = {{user}}</p>
+
+	<div class="clearfix"></div>
+	<table class="table table-strip table-hover" data-ng-init="fetchUser()">
+
+		<tr style="background-color: #8FBC8F">
+			<td><b>Name</b></td>
+			<td><b>Mobile</b></td>
+			<td><b>Type</b></td>
+			<td><b>Pincode</b></td>
+			<td><b>Password</b></td>
+			<td><b>Landmark</b></td>
+			<td><b>Address</b></td>
+		</tr>
+		<tr ng-repeat="item in items">
+			<td>{{user.name}}</td>
+			<td>{{user.mobile}}</td>
+			<td>{{user.type}}</td>
+			<td>{{user.pincode}}</td>
+			<td>{{user.password}}</td>
+			<td>{{user.landmark}}</td>
+			<td>{{user.address}}</td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+
